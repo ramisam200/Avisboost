@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle, PaperPlaneTilt } from "@phosphor-icons/react";
+import { CheckCircle, PaperPlaneTilt, Lightning } from "@phosphor-icons/react";
 import { Button } from "./Header.jsx";
 
 const TRUST = ["Aucun logiciel à installer", "Envoi en un clic", "Sans engagement"];
@@ -87,11 +87,12 @@ export default function Hero() {
                 <span className="size-2.5 rounded-full bg-line" />
               </div>
 
-              <p className="mt-6 text-[0.7rem] font-semibold uppercase tracking-wide text-ink-faint">
-                Nouveau client
-              </p>
+              <span className="mt-6 inline-flex items-center gap-1.5 rounded-full bg-green-soft px-3 py-1 text-xs font-semibold text-green-dark">
+                <Lightning weight="fill" className="size-3.5" />
+                5 secondes chrono
+              </span>
 
-              <div className="mt-1.5 flex items-center justify-between rounded-2xl border border-line bg-white px-4 py-3.5 shadow-sm">
+              <div className="mt-3 flex items-center justify-between rounded-2xl border border-line bg-white px-4 py-3.5 shadow-sm">
                 <span className="text-[0.95rem] text-ink-muted">sophie@email.com</span>
                 <span className="size-2 animate-pulse rounded-full bg-green" />
               </div>
