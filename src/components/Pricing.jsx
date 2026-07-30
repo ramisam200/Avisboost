@@ -9,6 +9,7 @@ const PLANS = [
     price: "15 €",
     period: "/mois",
     installFee: true,
+    smsUpsell: true,
     features: [
       "Jusqu'à 250 demandes d'avis par mois",
       "Interface AvisBoost",
@@ -23,6 +24,7 @@ const PLANS = [
     price: "29 €",
     period: "/mois",
     installFee: true,
+    smsUpsell: true,
     features: [
       "Jusqu'à 500 demandes d'avis par mois",
       "Page de demande d'avis personnalisée",
@@ -119,6 +121,18 @@ export default function Pricing() {
                 </ul>
               )}
 
+              {plan.smsUpsell && (
+                <a
+                  href="#pack-sms"
+                  className={`mt-5 inline-flex items-center gap-1.5 text-sm font-semibold hover:underline ${
+                    plan.highlight ? "text-green" : "text-green-dark"
+                  }`}
+                >
+                  <DeviceMobile weight="bold" className="size-4" />
+                  Option Pack SMS disponible pour plus de résultats
+                </a>
+              )}
+
               <Button
                 href="#faq"
                 className={`mt-8 h-12 w-full text-[0.95rem] ${
@@ -134,11 +148,12 @@ export default function Pricing() {
         </div>
 
         <motion.div
+          id="pack-sms"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-8 overflow-hidden rounded-[1.75rem] border border-green/30 bg-gradient-to-br from-green-soft to-white p-8 shadow-sm sm:p-10"
+          className="mt-8 scroll-mt-24 overflow-hidden rounded-[1.75rem] border border-green/30 bg-gradient-to-br from-green-soft to-white p-8 shadow-sm sm:p-10"
         >
           <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex gap-5">
@@ -150,6 +165,9 @@ export default function Pricing() {
                   Rapporte plus de commentaires
                 </span>
                 <h3 className="mt-3 text-xl font-semibold text-ink">Pack SMS</h3>
+                <p className="mt-1 text-sm font-medium text-green-dark">
+                  En complément de votre offre Start ou Pro
+                </p>
                 <p className="mt-2 max-w-md text-[0.95rem] leading-relaxed text-ink-muted">
                   Vous avez les numéros de vos clients ? N&rsquo;hésitez plus. Le SMS
                   est lu presque instantanément et convertit mieux que l&rsquo;e-mail
