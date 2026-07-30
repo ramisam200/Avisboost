@@ -8,6 +8,7 @@ const PLANS = [
     name: "Start",
     price: "15 €",
     period: "/mois",
+    installFee: true,
     features: [
       "Jusqu'à 250 demandes d'avis par mois",
       "Interface AvisBoost",
@@ -21,6 +22,7 @@ const PLANS = [
     name: "Pro",
     price: "29 €",
     period: "/mois",
+    installFee: true,
     features: [
       "Jusqu'à 500 demandes d'avis par mois",
       "Page de demande d'avis personnalisée",
@@ -37,7 +39,7 @@ const PLANS = [
     price: "Sur devis",
     period: "",
     features: [
-      "Envoi par SMS en plus de l'e-mail",
+      "Volume de SMS et d'e-mails adapté à vos besoins",
       "Gestion complète assurée par notre équipe",
     ],
     text: "Pour les entreprises ayant plusieurs établissements ou des besoins spécifiques. Le contenu de l'offre est adapté à votre demande.",
@@ -56,7 +58,11 @@ export default function Pricing() {
           center
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3 lg:items-start">
+        <p className="mx-auto mt-6 w-fit rounded-full border border-green/30 bg-green-soft px-4 py-2 text-center text-sm font-semibold text-green-dark">
+          Frais d&rsquo;installation à 50 € au lieu de 99 € pour toute souscription, jusqu&rsquo;au 31 août
+        </p>
+
+        <div className="mt-10 grid gap-6 lg:grid-cols-3 lg:items-start">
           {PLANS.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -88,6 +94,13 @@ export default function Pricing() {
                   </span>
                 )}
               </div>
+
+              {plan.installFee && (
+                <p className={`mt-1.5 text-sm font-medium ${plan.highlight ? "text-white/60" : "text-ink-muted"}`}>
+                  <span className={`line-through ${plan.highlight ? "text-white/35" : "text-ink-faint"}`}>99 €</span>{" "}
+                  <span className={plan.highlight ? "text-green" : "text-green-dark"}>50 €</span> d&rsquo;installation
+                </p>
+              )}
 
               {plan.text && (
                 <p className={`mt-4 text-[0.95rem] leading-relaxed ${plan.highlight ? "text-white/60" : "text-ink-muted"}`}>
@@ -164,6 +177,10 @@ export default function Pricing() {
                 <span className="text-4xl font-bold text-ink">50 €</span>
                 <span className="text-ink-muted">/mois</span>
               </div>
+              <p className="text-sm font-medium text-ink-muted">
+                <span className="text-ink-faint line-through">99 €</span>{" "}
+                <span className="text-green-dark">50 €</span> d&rsquo;installation
+              </p>
               <Button href="#faq" className="h-12 w-full px-6 text-[0.95rem] sm:w-auto">
                 Ajouter le pack SMS
               </Button>
