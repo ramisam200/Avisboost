@@ -19,9 +19,9 @@ function App() {
       <main id="main-content">
         <Hero />
         <CaseStudy />
+        <VideoSection />
         <Problem />
         <HowItWorks />
-        <VideoSection />
         <AnimationDemo />
         <Features />
         <Pricing />

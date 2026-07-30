@@ -10,36 +10,12 @@ import {
 import SectionHeading from "./SectionHeading.jsx";
 
 const FEATURES = [
-  {
-    icon: PaperPlaneTilt,
-    title: "Envoi rapide de demandes d'avis Google",
-    text: "Saisissez l'e-mail du client, cliquez sur Envoyer. La demande part immédiatement.",
-  },
-  {
-    icon: ChatCircleText,
-    title: "Messages professionnels personnalisés",
-    text: "Un e-mail clair et soigné qui donne envie de laisser un avis, sans paraître insistant.",
-  },
-  {
-    icon: ClockCounterClockwise,
-    title: "Historique des envois",
-    text: "Retrouvez à tout moment la liste des demandes envoyées et leur statut.",
-  },
-  {
-    icon: Cursor,
-    title: "Interface simple et intuitive",
-    text: "Aucune formation nécessaire : deux champs, un bouton, c'est tout.",
-  },
-  {
-    icon: ChartBar,
-    title: "Tableau de bord",
-    text: "Suivez vos envois et l'évolution de vos avis Google en un coup d'œil.",
-  },
-  {
-    icon: Storefront,
-    title: "Compatible avec tous les commerces",
-    text: "Pensé pour les commerces, indépendants, entreprises et professionnels, quel que soit le secteur.",
-  },
+  { icon: PaperPlaneTilt, title: "Envoi rapide de demandes d'avis" },
+  { icon: ChatCircleText, title: "Messages professionnels personnalisés" },
+  { icon: ClockCounterClockwise, title: "Historique des envois" },
+  { icon: Cursor, title: "Interface simple et intuitive" },
+  { icon: ChartBar, title: "Tableau de bord" },
+  { icon: Storefront, title: "Compatible avec tous les commerces" },
 ];
 
 export default function Features() {
@@ -52,21 +28,20 @@ export default function Features() {
           center
         />
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((f, i) => (
             <motion.div
               key={f.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-              className="rounded-2xl border border-line bg-white p-7 shadow-sm transition-shadow hover:shadow-card"
+              transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
+              className="flex items-center gap-3.5 rounded-2xl border border-line bg-white p-5 shadow-sm transition-shadow hover:shadow-card"
             >
-              <span className="grid size-12 place-items-center rounded-xl bg-green-soft">
-                <f.icon weight="duotone" className="size-6 text-green-dark" />
+              <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-green-soft">
+                <f.icon weight="duotone" className="size-5 text-green-dark" />
               </span>
-              <h3 className="mt-5 text-lg font-semibold text-ink">{f.title}</h3>
-              <p className="mt-2 text-[0.95rem] leading-relaxed text-ink-muted">{f.text}</p>
+              <h3 className="text-[0.95rem] font-semibold text-ink">{f.title}</h3>
             </motion.div>
           ))}
         </div>

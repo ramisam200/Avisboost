@@ -52,10 +52,15 @@ export default function Problem() {
           ))}
         </div>
 
-        <p className="mt-12 max-w-2xl text-[0.95rem] leading-relaxed text-white/45">
+        <p className="mt-12 max-w-2xl text-[0.95rem] font-semibold leading-relaxed text-green">
           Résultat : la fiche Google d&rsquo;un commerce reflète rarement la qualité
           réelle de son travail. Elle reflète surtout qui a pensé à écrire — et ce
           sont rarement les clients contents.
+        </p>
+
+        <p className="mt-8 max-w-2xl text-2xl font-bold leading-snug text-white sm:text-3xl">
+          Ne demandez plus jamais d&rsquo;avis à voix haute.{" "}
+          <span className="text-green">Laissez-nous faire.</span>
         </p>
       </div>
     </section>

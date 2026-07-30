@@ -140,10 +140,10 @@ export default function CaseStudy() {
 
         <div className="mt-14 flex justify-center">
           <a
-            href="#comment-ca-marche"
+            href="#video"
             className="group inline-flex flex-col items-center gap-2 text-sm font-semibold text-ink-muted transition-colors hover:text-green-dark"
           >
-            Comment ça marche
+            Voir la vidéo de démonstration
             <ArrowDown weight="bold" className="size-5 animate-bounce" />
           </a>
         </div>

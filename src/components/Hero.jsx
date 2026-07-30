@@ -87,11 +87,11 @@ export default function Hero() {
                 <span className="size-2.5 rounded-full bg-line" />
               </div>
 
-              <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-ink-faint">
+              <p className="mt-6 text-[0.7rem] font-semibold uppercase tracking-wide text-ink-faint">
                 Nouveau client
               </p>
 
-              <div className="mt-3 flex items-center justify-between rounded-2xl border border-line bg-white px-4 py-3.5 shadow-sm">
+              <div className="mt-1.5 flex items-center justify-between rounded-2xl border border-line bg-white px-4 py-3.5 shadow-sm">
                 <span className="text-[0.95rem] text-ink-muted">sophie@email.com</span>
                 <span className="size-2 animate-pulse rounded-full bg-green" />
               </div>
