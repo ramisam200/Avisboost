@@ -149,7 +149,11 @@ export default function Pricing() {
                   </li>
                   <li className="flex items-center gap-2">
                     <Check weight="bold" className="size-4 shrink-0 text-green-dark" />
-                    500 demandes d&rsquo;avis envoyées par e-mail par mois
+                    Message SMS rédigé sur mesure pour votre commerce
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check weight="bold" className="size-4 shrink-0 text-green-dark" />
+                    Exclusion automatique des clients ayant déjà laissé un avis
                   </li>
                 </ul>
               </div>
