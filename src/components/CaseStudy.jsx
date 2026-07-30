@@ -24,7 +24,7 @@ export default function CaseStudy() {
           </div>
 
           <p className="mt-6 text-xl font-medium leading-relaxed text-ink sm:text-2xl">
-            « Nous avons gagné 20 avis Google 5 étoiles en seulement un mois et
+            « Nous avons gagné 17 avis Google 5 étoiles en seulement un mois et
             demi. Nous ne nous y attendions pas et nous sommes très satisfaits. »
           </p>
 
