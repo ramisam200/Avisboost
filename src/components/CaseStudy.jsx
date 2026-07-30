@@ -86,6 +86,11 @@ export default function CaseStudy() {
               +17 avis Google depuis le 14 mai
             </span>
           </div>
+
+          <p className="mt-4 text-center text-sm text-ink-faint">
+            Résultat obtenu en envoyant une demande d&rsquo;avis après chaque
+            visite client.
+          </p>
         </motion.div>
       </div>
     </section>
