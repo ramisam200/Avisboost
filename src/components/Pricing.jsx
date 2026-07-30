@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check } from "@phosphor-icons/react";
+import { Check, DeviceMobile } from "@phosphor-icons/react";
 import SectionHeading from "./SectionHeading.jsx";
 import { Button } from "./Header.jsx";
 
@@ -119,6 +119,53 @@ export default function Pricing() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-8 overflow-hidden rounded-[1.75rem] border border-green/30 bg-gradient-to-br from-green-soft to-white p-8 shadow-sm sm:p-10"
+        >
+          <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex gap-5">
+              <span className="hidden size-14 shrink-0 place-items-center rounded-2xl bg-green text-white shadow-glow sm:grid">
+                <DeviceMobile weight="duotone" className="size-7" />
+              </span>
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-full bg-green px-3.5 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  Rapporte plus de commentaires
+                </span>
+                <h3 className="mt-3 text-xl font-semibold text-ink">Pack SMS</h3>
+                <p className="mt-2 max-w-md text-[0.95rem] leading-relaxed text-ink-muted">
+                  Vous avez les numéros de vos clients ? N&rsquo;hésitez plus. Le SMS
+                  est lu presque instantanément et convertit mieux que l&rsquo;e-mail
+                  seul.
+                </p>
+                <ul className="mt-4 space-y-1.5 text-sm text-ink-muted">
+                  <li className="flex items-center gap-2">
+                    <Check weight="bold" className="size-4 shrink-0 text-green-dark" />
+                    200 demandes d&rsquo;avis envoyées par SMS par mois
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check weight="bold" className="size-4 shrink-0 text-green-dark" />
+                    500 demandes d&rsquo;avis envoyées par e-mail par mois
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex shrink-0 flex-col items-start gap-3 sm:items-end">
+              <div className="flex items-baseline gap-1">
+                <span className="text-4xl font-bold text-ink">50 €</span>
+                <span className="text-ink-muted">/mois</span>
+              </div>
+              <Button href="#faq" className="h-12 w-full px-6 text-[0.95rem] sm:w-auto">
+                Ajouter le pack SMS
+              </Button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
