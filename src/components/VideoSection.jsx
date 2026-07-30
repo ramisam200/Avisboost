@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Play, EnvelopeSimple, PaperPlaneTilt, Star } from "@phosphor-icons/react";
 import SectionHeading from "./SectionHeading.jsx";
 
-// Remplacez YOUTUBE_ID par l'identifiant de la vidéo AvisBoost une fois disponible.
-const YOUTUBE_ID = "";
+const VIDEO_SRC = "/video/avisboost-demo.mp4";
 
 export default function VideoSection() {
   const [playing, setPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlay = () => {
+    setPlaying(true);
+    requestAnimationFrame(() => videoRef.current?.play());
+  };
 
   return (
     <section id="video" className="relative isolate overflow-hidden bg-ink py-24 sm:py-32">
@@ -27,19 +32,19 @@ export default function VideoSection() {
           transition={{ duration: 0.6 }}
           className="relative mx-auto mt-14 aspect-video max-w-3xl overflow-hidden rounded-[1.75rem] border border-white/10 shadow-card"
         >
-          {playing && YOUTUBE_ID ? (
-            <iframe
-              className="size-full"
-              src={`https://www.youtube.com/embed/${YOUTUBE_ID}?autoplay=1`}
-              title="Découvrez AvisBoost en moins de 60 secondes"
-              allow="accelerate; autoplay; encrypted-media; picture-in-picture"
-              allowFullScreen
-            />
-          ) : (
+          <video
+            ref={videoRef}
+            src={VIDEO_SRC}
+            controls={playing}
+            playsInline
+            className={`size-full object-cover ${playing ? "" : "pointer-events-none"}`}
+          />
+
+          {!playing && (
             <button
               type="button"
-              onClick={() => setPlaying(true)}
-              className="group relative flex size-full items-center justify-center bg-gradient-to-br from-[#111815] to-ink"
+              onClick={handlePlay}
+              className="group absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#111815]/90 to-ink/90"
             >
               <div className="absolute inset-0 flex items-center justify-center gap-10 opacity-25">
                 <EnvelopeSimple weight="duotone" className="size-16 text-white" />
