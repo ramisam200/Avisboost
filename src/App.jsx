@@ -18,10 +18,10 @@ function App() {
       <Header />
       <main id="main-content">
         <Hero />
+        <CaseStudy />
         <Problem />
         <HowItWorks />
         <AnimationDemo />
-        <CaseStudy />
         <Features />
         <Pricing />
         <VideoSection />
