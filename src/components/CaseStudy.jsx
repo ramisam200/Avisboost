@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Star, Quotes } from "@phosphor-icons/react";
+import { Star, Quotes, ArrowRight, TrendUp } from "@phosphor-icons/react";
 import SectionHeading from "./SectionHeading.jsx";
 
 export default function CaseStudy() {
@@ -36,6 +36,55 @@ export default function CaseStudy() {
               <p className="text-sm font-semibold text-ink">Salon KBR</p>
               <p className="text-sm text-ink-muted">Commerce partenaire AvisBoost</p>
             </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mx-auto mt-10 max-w-3xl"
+        >
+          <p className="text-center text-sm font-semibold uppercase tracking-wide text-ink-faint">
+            Constaté sur la fiche Google du Salon KBR
+          </p>
+
+          <div className="mt-5 grid grid-cols-1 items-center gap-3 sm:grid-cols-[1fr_auto_1fr]">
+            <figure className="overflow-hidden rounded-2xl border border-line bg-white shadow-sm">
+              <img
+                src="/images/kbr-avant-14-mai.jpg"
+                alt="Fiche Google du Salon KBR le 14 mai : 78 avis, note 4,9/5"
+                className="aspect-[4/3] w-full object-cover object-top"
+              />
+              <figcaption className="border-t border-line px-4 py-3 text-center">
+                <p className="text-xs font-semibold uppercase tracking-wide text-ink-faint">14 mai</p>
+                <p className="text-lg font-bold text-ink">78 avis</p>
+              </figcaption>
+            </figure>
+
+            <div className="flex items-center justify-center py-1 text-green sm:py-0">
+              <ArrowRight weight="bold" className="size-6 rotate-90 sm:rotate-0" />
+            </div>
+
+            <figure className="overflow-hidden rounded-2xl border border-green/30 bg-white shadow-sm">
+              <img
+                src="/images/kbr-apres-aujourdhui.jpg"
+                alt="Fiche Google du Salon KBR aujourd'hui : 95 avis, note 4,9/5"
+                className="aspect-[4/3] w-full object-cover object-top"
+              />
+              <figcaption className="border-t border-line px-4 py-3 text-center">
+                <p className="text-xs font-semibold uppercase tracking-wide text-green-dark">Aujourd&rsquo;hui</p>
+                <p className="text-lg font-bold text-ink">95 avis</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="mt-5 flex justify-center">
+            <span className="inline-flex items-center gap-2 rounded-full bg-green-soft px-4 py-2 text-sm font-semibold text-green-dark">
+              <TrendUp weight="bold" className="size-4" />
+              +17 avis Google depuis le 14 mai
+            </span>
           </div>
         </motion.div>
       </div>
