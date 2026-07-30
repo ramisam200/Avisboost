@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { CheckCircle, PaperPlaneTilt } from "@phosphor-icons/react";
 import { Button } from "./Header.jsx";
 
-const TRUST = ["Aucune installation requise", "Envoi en un clic", "Sans engagement"];
+const TRUST = ["Aucun logiciel à installer", "Envoi en un clic", "Sans engagement"];
 
 export default function Hero() {
   return (
