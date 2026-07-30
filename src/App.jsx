@@ -21,10 +21,10 @@ function App() {
         <CaseStudy />
         <Problem />
         <HowItWorks />
+        <VideoSection />
         <AnimationDemo />
         <Features />
         <Pricing />
-        <VideoSection />
         <Comparison />
         <FAQ />
         <FinalCTA />

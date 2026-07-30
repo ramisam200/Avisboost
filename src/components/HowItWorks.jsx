@@ -7,6 +7,7 @@ const STEPS = [
     icon: EnvelopeSimple,
     title: "Saisissez l'adresse e-mail",
     text: "Après chaque visite, entrez simplement l'adresse e-mail de votre client.",
+    badge: "Nouveau client",
   },
   {
     icon: PaperPlaneTilt,
@@ -40,8 +41,13 @@ export default function HowItWorks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="relative flex flex-col items-center text-center"
+              className="relative flex flex-col items-center pt-9 text-center"
             >
+              {step.badge && (
+                <span className="absolute -top-1 left-1/2 inline-flex -translate-x-1/2 items-center whitespace-nowrap rounded-full border border-line bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-ink-faint">
+                  {step.badge}
+                </span>
+              )}
               <span className="relative z-10 grid size-[4.5rem] place-items-center rounded-full bg-green text-2xl font-bold text-white shadow-glow">
                 {i + 1}
               </span>
