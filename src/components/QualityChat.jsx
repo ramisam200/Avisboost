@@ -17,27 +17,17 @@ export default function QualityChat() {
               <User weight="fill" className="size-5" />
             </span>
             <div className="rounded-2xl rounded-bl-sm bg-mist px-4 py-3 text-[0.95rem] leading-relaxed text-ink">
-              Il peut avoir 70 avis si c&rsquo;est 5 étoiles (ou presque) — je
-              préfère ça à quelqu&rsquo;un qui a 500 avis mais un 4,5.
+              Je préfère 70 avis à 5 étoiles que 500 avis à 4,5.
             </div>
           </div>
 
           <div className="flex items-end justify-end gap-2.5">
             <div className="rounded-2xl rounded-br-sm bg-mist px-4 py-3 text-[0.95rem] leading-relaxed text-ink">
-              Mec, les avis Google c&rsquo;est LA base pour juger la qualité. 💯
+              Les avis Google, c&rsquo;est LA base pour juger la qualité. 💯
             </div>
             <span className="grid size-9 shrink-0 place-items-center rounded-full bg-green-soft text-green-dark">
               <User weight="fill" className="size-5" />
             </span>
-          </div>
-
-          <div className="flex items-end gap-2.5 pt-2">
-            <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-green text-xs font-bold text-white shadow-glow">
-              AB
-            </span>
-            <div className="rounded-2xl rounded-bl-sm bg-green px-4 py-3 text-[0.95rem] font-medium leading-relaxed text-white">
-              AvisBoost : et si on faisait grimper ta note&nbsp;?
-            </div>
           </div>
         </motion.div>
       </div>

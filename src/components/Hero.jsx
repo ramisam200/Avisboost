@@ -51,7 +51,7 @@ export default function Hero() {
               Choisir mon offre
             </Button>
             <a
-              href="#animation"
+              href="#video"
               className="inline-flex h-[3.4rem] w-full items-center justify-center gap-2 rounded-full border border-line bg-white px-7 text-base font-semibold text-ink transition-colors hover:border-ink/20 hover:bg-mist sm:w-auto"
             >
               Voir la démonstration
