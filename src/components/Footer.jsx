@@ -3,6 +3,7 @@ const LINKS = [
   { href: "#fonctionnalites", label: "Fonctionnalités" },
   { href: "#tarifs", label: "Tarifs" },
   { href: "#faq", label: "FAQ" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Footer() {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CaretDown } from "@phosphor-icons/react";
+import { CaretDown, EnvelopeSimple } from "@phosphor-icons/react";
 import SectionHeading from "./SectionHeading.jsx";
 
 const QUESTIONS = [
@@ -83,13 +83,21 @@ export default function FAQ() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-sm text-ink-muted">
-          Une question qui n&rsquo;est pas ici ? Écrivez-nous à{" "}
-          <a href="mailto:bonjour@avisboost.be" className="font-semibold text-green-dark">
-            bonjour@avisboost.be
-          </a>
-          .
-        </p>
+        <div id="contact" className="mt-14 scroll-mt-24 rounded-2xl border border-line bg-mist/60 p-8 text-center">
+          <span className="mx-auto grid size-11 place-items-center rounded-full bg-green-soft">
+            <EnvelopeSimple weight="duotone" className="size-5 text-green-dark" />
+          </span>
+          <p className="mt-3 text-base font-semibold text-ink">
+            Un souci, une question ? Nous sommes là.
+          </p>
+          <p className="mt-1 text-sm text-ink-muted">
+            Écrivez-nous à{" "}
+            <a href="mailto:bonjour@avisboost.be" className="font-semibold text-green-dark hover:underline">
+              bonjour@avisboost.be
+            </a>
+            , on vous répond rapidement.
+          </p>
+        </div>
       </div>
     </section>
   );
