@@ -10,7 +10,7 @@ const PLANS = [
     period: "/mois · TVA comprise",
     installFee: true,
     smsUpsell: true,
-    href: "https://buy.stripe.com/test_00wdR14az8iv3aHe9V87K00",
+    href: "https://buy.stripe.com/00wdR14az8iv3aHe9V87K00",
     features: [
       "Jusqu'à 250 demandes d'avis par mois",
       "Interface AvisBoost",

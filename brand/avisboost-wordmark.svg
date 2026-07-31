@@ -1,0 +1,5 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="200" height="200" rx="44" fill="#34A853"/>
+  <text x="110" y="145" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="78" fill="#FFFFFF">AB</text>
+  <text x="250" y="140" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="96" fill="#0A0D0C">AvisBoost</text>
+</svg>
