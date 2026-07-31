@@ -6,8 +6,8 @@ import { Button } from "./Header.jsx";
 const PLANS = [
   {
     name: "Start",
-    price: "15 €",
-    period: "/mois",
+    price: "19 €",
+    period: "/mois · TVA comprise",
     installFee: true,
     smsUpsell: true,
     href: "https://buy.stripe.com/test_00wdR14az8iv3aHe9V87K00",
@@ -22,8 +22,8 @@ const PLANS = [
   },
   {
     name: "Pro",
-    price: "29 €",
-    period: "/mois",
+    price: "39 €",
+    period: "/mois · TVA comprise",
     installFee: true,
     smsUpsell: true,
     features: [
@@ -196,7 +196,7 @@ export default function Pricing() {
             <div className="flex shrink-0 flex-col items-start gap-3 sm:items-end">
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-bold text-ink">50 €</span>
-                <span className="text-ink-muted">/mois</span>
+                <span className="text-ink-muted">/mois · TVA comprise</span>
               </div>
               <p className="text-sm font-medium text-ink-muted">
                 <span className="text-ink-faint line-through">99 €</span>{" "}
