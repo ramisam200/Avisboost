@@ -29,12 +29,6 @@ export default function QualityChat() {
               <User weight="fill" className="size-5" />
             </span>
           </div>
-
-          <p className="pt-4 text-center text-[0.95rem] leading-relaxed text-ink-muted">
-            AvisBoost aide à faire grimper votre note en donnant la parole à
-            tous vos clients satisfaits — pas juste ceux qui y pensent tout
-            seuls.
-          </p>
         </motion.div>
       </div>
     </section>
