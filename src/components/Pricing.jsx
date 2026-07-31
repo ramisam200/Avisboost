@@ -26,6 +26,7 @@ const PLANS = [
     period: "/mois · TVA comprise",
     installFee: true,
     smsUpsell: true,
+    href: "https://buy.stripe.com/9B63cnayXcyLbHd7Lx87K01",
     features: [
       "Jusqu'à 500 demandes d'avis par mois",
       "Page de demande d'avis personnalisée",
@@ -202,7 +203,12 @@ export default function Pricing() {
                 <span className="text-ink-faint line-through">99 €</span>{" "}
                 <span className="text-green-dark">50 €</span> d&rsquo;installation
               </p>
-              <Button href="#faq" className="h-12 w-full px-6 text-[0.95rem] sm:w-auto">
+              <Button
+                href="https://buy.stripe.com/28E7sD7mLbuHcLh8PB87K03"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-12 w-full px-6 text-[0.95rem] sm:w-auto"
+              >
                 Ajouter le pack SMS
               </Button>
             </div>
