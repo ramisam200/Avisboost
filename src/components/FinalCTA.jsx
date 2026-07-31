@@ -16,12 +16,12 @@ export default function FinalCTA() {
           Prêt à obtenir plus d&rsquo;avis Google ?
         </motion.h2>
         <p className="mt-4 text-lg text-white/60">
-          Essayez AvisBoost gratuitement et envoyez votre première demande d&rsquo;avis
-          en moins de deux minutes.
+          Choisissez votre offre et envoyez votre première demande d&rsquo;avis en
+          moins de deux minutes.
         </p>
         <div className="mt-8 flex justify-center">
           <Button href="#tarifs" className="h-[3.4rem] px-8 text-base">
-            Essayer gratuitement
+            Choisir mon offre
           </Button>
         </div>
       </div>

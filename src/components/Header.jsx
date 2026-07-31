@@ -60,7 +60,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <Button href="#tarifs" className="hidden h-11 px-5 text-[0.9375rem] sm:inline-flex">
-            Essayer gratuitement
+            Choisir mon offre
           </Button>
           <button
             type="button"
@@ -88,7 +88,7 @@ export default function Header() {
             ))}
           </nav>
           <Button href="#tarifs" onClick={() => setOpen(false)} className="mt-4 h-12 w-full text-base">
-            Essayer gratuitement
+            Choisir mon offre
           </Button>
         </div>
       )}

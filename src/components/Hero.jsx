@@ -48,7 +48,7 @@ export default function Hero() {
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <Button href="#tarifs" className="h-[3.4rem] px-7 text-base w-full sm:w-auto">
-              Essayer gratuitement
+              Choisir mon offre
             </Button>
             <a
               href="#animation"
