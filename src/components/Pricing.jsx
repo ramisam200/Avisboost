@@ -10,6 +10,7 @@ const PLANS = [
     period: "/mois",
     installFee: true,
     smsUpsell: true,
+    href: "https://buy.stripe.com/test_00wdR14az8iv3aHe9V87K00",
     features: [
       "Jusqu'à 250 demandes d'avis par mois",
       "Interface AvisBoost",
@@ -134,7 +135,9 @@ export default function Pricing() {
               )}
 
               <Button
-                href="#faq"
+                href={plan.href || "#faq"}
+                target={plan.href ? "_blank" : undefined}
+                rel={plan.href ? "noopener noreferrer" : undefined}
                 className={`mt-8 h-12 w-full text-[0.95rem] ${
                   plan.highlight
                     ? ""
