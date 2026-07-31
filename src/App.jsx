@@ -1,5 +1,6 @@
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
+import QualityChat from "./components/QualityChat.jsx";
 import Problem from "./components/Problem.jsx";
 import HowItWorks from "./components/HowItWorks.jsx";
 import AnimationDemo from "./components/AnimationDemo.jsx";
@@ -18,6 +19,7 @@ function App() {
       <Header />
       <main id="main-content">
         <Hero />
+        <QualityChat />
         <CaseStudy />
         <VideoSection />
         <Problem />
