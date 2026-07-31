@@ -92,8 +92,8 @@ export default function FAQ() {
           </p>
           <p className="mt-1 text-sm text-ink-muted">
             Écrivez-nous à{" "}
-            <a href="mailto:bonjour@avisboost.be" className="font-semibold text-green-dark hover:underline">
-              bonjour@avisboost.be
+            <a href="mailto:avisboostentreprise@gmail.com" className="font-semibold text-green-dark hover:underline">
+              avisboostentreprise@gmail.com
             </a>
             , on vous répond rapidement.
           </p>
