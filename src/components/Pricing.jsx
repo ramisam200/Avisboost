@@ -12,7 +12,7 @@ const PLANS = [
     smsUpsell: true,
     href: "https://buy.stripe.com/00wdR14az8iv3aHe9V87K00",
     features: [
-      "Jusqu'à 250 demandes d'avis par mois",
+      "Jusqu'à 150 demandes d'avis par mois",
       "Interface AvisBoost",
       "Modèle d'e-mail professionnel",
       "Tableau de bord",
@@ -27,7 +27,7 @@ const PLANS = [
     installFee: true,
     smsUpsell: true,
     features: [
-      "Jusqu'à 500 demandes d'avis par mois",
+      "Jusqu'à 250 demandes d'avis par mois",
       "Interface AvisBoost",
       "Modèle d'e-mail professionnel",
       "Tableau de bord",
@@ -44,7 +44,7 @@ const PLANS = [
     limited: "Places limitées à 50 clients, pour garantir un vrai suivi personnalisé",
     tagline: "Vous ne devez rien faire, on s'occupe de booster votre commerce.",
     features: [
-      "Jusqu'à 1000 demandes d'avis par mois",
+      "Jusqu'à 500 demandes d'avis par mois",
       "Page de demande d'avis personnalisée à l'image de votre commerce",
       "Texte d'e-mail sur mesure, rédigé pour maximiser les avis 5 étoiles",
       "Bilan complet de votre présence Google au démarrage",
