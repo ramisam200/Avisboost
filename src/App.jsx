@@ -3,7 +3,6 @@ import Hero from "./components/Hero.jsx";
 import QualityChat from "./components/QualityChat.jsx";
 import Problem from "./components/Problem.jsx";
 import HowItWorks from "./components/HowItWorks.jsx";
-import AnimationDemo from "./components/AnimationDemo.jsx";
 import CaseStudy from "./components/CaseStudy.jsx";
 import Features from "./components/Features.jsx";
 import Pricing from "./components/Pricing.jsx";
@@ -24,7 +23,6 @@ function App() {
         <VideoSection />
         <Problem />
         <HowItWorks />
-        <AnimationDemo />
         <Features />
         <Pricing />
         <Comparison />

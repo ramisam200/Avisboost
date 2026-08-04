@@ -2,20 +2,20 @@ import { motion } from "framer-motion";
 import {
   PaperPlaneTilt,
   ChatCircleText,
-  ClockCounterClockwise,
   Cursor,
-  ChartBar,
   Storefront,
+  ShieldCheck,
+  Rocket,
 } from "@phosphor-icons/react";
 import SectionHeading from "./SectionHeading.jsx";
 
 const FEATURES = [
   { icon: PaperPlaneTilt, title: "Envoi rapide de demandes d'avis" },
   { icon: ChatCircleText, title: "Messages professionnels personnalisés" },
-  { icon: ClockCounterClockwise, title: "Historique des envois" },
   { icon: Cursor, title: "Interface simple et intuitive" },
-  { icon: ChartBar, title: "Tableau de bord" },
   { icon: Storefront, title: "Compatible avec tous les commerces" },
+  { icon: ShieldCheck, title: "Sans engagement" },
+  { icon: Rocket, title: "Mise en place rapide" },
 ];
 
 export default function Features() {

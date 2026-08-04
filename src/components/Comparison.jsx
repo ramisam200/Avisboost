@@ -19,7 +19,7 @@ const ROWS = [
   {
     label: "Suivi des résultats",
     classic: "Aucun, on regarde la note de temps en temps",
-    avisboost: "Historique des envois dans le tableau de bord",
+    avisboost: "Votre note Google qui évolue, semaine après semaine",
   },
   {
     label: "Mise en route",
