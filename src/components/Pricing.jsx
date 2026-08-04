@@ -41,6 +41,7 @@ const PLANS = [
     price: "99 €",
     period: "/mois · TVA comprise",
     installFee: true,
+    href: "https://buy.stripe.com/3cI5kv6iH2Yb4eL9TF87K05",
     badge: "Le plus demandé",
     limited: "Places limitées à 50 clients, pour garantir un vrai suivi personnalisé",
     tagline: "Vous ne devez rien faire, on s'occupe de booster votre commerce.",
