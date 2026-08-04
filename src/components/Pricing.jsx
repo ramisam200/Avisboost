@@ -82,14 +82,9 @@ export default function Pricing() {
           center
         />
 
-        <div className="mx-auto mt-6 flex w-fit flex-col items-center gap-2">
-          <p className="rounded-full border border-green/30 bg-green-soft px-4 py-2 text-center text-sm font-semibold text-green-dark">
-            Frais d&rsquo;installation à 50 € au lieu de 99 € pour toute souscription, jusqu&rsquo;au 31 août
-          </p>
-          <p className="rounded-full border border-green/30 bg-green-soft px-4 py-2 text-center text-sm font-semibold text-green-dark">
-            Ces tarifs sont garantis jusqu&rsquo;à fin septembre
-          </p>
-        </div>
+        <p className="mx-auto mt-6 w-fit rounded-full border border-green/30 bg-green-soft px-4 py-2 text-center text-sm font-semibold text-green-dark">
+          Tarifs actuels et installation à 50 € (au lieu de 99 €) garantis jusqu&rsquo;à fin septembre
+        </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:items-start">
           {PLANS.map((plan, i) => (
