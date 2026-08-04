@@ -30,11 +30,22 @@ export default function Hero() {
             Transformez vos clients satisfaits en avis Google.
           </motion.h1>
 
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-green/30 bg-green-soft px-5 py-3"
+          >
+            <span className="text-xl font-extrabold text-green-dark sm:text-2xl">+ d&rsquo;avis</span>
+            <span className="text-green">→</span>
+            <span className="text-xl font-extrabold text-green-dark sm:text-2xl">+ de clients</span>
+          </motion.div>
+
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12 }}
-            className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted sm:text-xl"
+            className="mt-5 max-w-xl text-lg leading-relaxed text-ink-muted sm:text-xl"
           >
             Après chaque visite, saisissez simplement l&rsquo;adresse e-mail de votre
             client. AvisBoost lui envoie automatiquement une demande d&rsquo;avis
