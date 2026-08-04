@@ -10,6 +10,7 @@ const PLANS = [
     period: "/mois · TVA comprise",
     installFee: true,
     smsUpsell: true,
+    engagement: "Sans engagement",
     href: "https://buy.stripe.com/00wdR14az8iv3aHe9V87K00",
     features: [
       "Jusqu'à 150 demandes d'avis par mois",
@@ -25,6 +26,7 @@ const PLANS = [
     period: "/mois · TVA comprise",
     installFee: true,
     smsUpsell: true,
+    engagement: "Sans engagement",
     href: "https://buy.stripe.com/cNi5kv0Yn2YbbHd2rd87K04",
     features: [
       "Jusqu'à 250 demandes d'avis par mois",
@@ -43,6 +45,7 @@ const PLANS = [
     badge: "Le plus demandé",
     limited: "Places limitées à 50 clients, pour garantir un vrai suivi personnalisé",
     tagline: "On s'occupe du suivi, vous vous occupez de vos clients.",
+    engagement: "Engagement de 3 mois",
     features: [
       "Jusqu'à 500 demandes d'avis par mois",
       "Page de demande d'avis personnalisée à l'image de votre commerce",
@@ -79,9 +82,14 @@ export default function Pricing() {
           center
         />
 
-        <p className="mx-auto mt-6 w-fit rounded-full border border-green/30 bg-green-soft px-4 py-2 text-center text-sm font-semibold text-green-dark">
-          Frais d&rsquo;installation à 50 € au lieu de 99 € pour toute souscription, jusqu&rsquo;au 31 août
-        </p>
+        <div className="mx-auto mt-6 flex w-fit flex-col items-center gap-2">
+          <p className="rounded-full border border-green/30 bg-green-soft px-4 py-2 text-center text-sm font-semibold text-green-dark">
+            Frais d&rsquo;installation à 50 € au lieu de 99 € pour toute souscription, jusqu&rsquo;au 31 août
+          </p>
+          <p className="rounded-full border border-green/30 bg-green-soft px-4 py-2 text-center text-sm font-semibold text-green-dark">
+            Ces tarifs sont garantis jusqu&rsquo;à fin septembre
+          </p>
+        </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:items-start">
           {PLANS.map((plan, i) => (
@@ -120,6 +128,12 @@ export default function Pricing() {
                 <p className={`mt-1.5 text-sm font-medium ${plan.highlight ? "text-white/60" : "text-ink-muted"}`}>
                   <span className={`line-through ${plan.highlight ? "text-white/35" : "text-ink-faint"}`}>99 €</span>{" "}
                   <span className={plan.highlight ? "text-green" : "text-green-dark"}>50 €</span> d&rsquo;installation
+                </p>
+              )}
+
+              {plan.engagement && (
+                <p className={`mt-1.5 text-sm font-medium ${plan.highlight ? "text-white/60" : "text-ink-muted"}`}>
+                  {plan.engagement}
                 </p>
               )}
 

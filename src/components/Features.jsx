@@ -14,7 +14,7 @@ const FEATURES = [
   { icon: ChatCircleText, title: "Messages professionnels personnalisés" },
   { icon: Cursor, title: "Interface simple et intuitive" },
   { icon: Storefront, title: "Compatible avec tous les commerces" },
-  { icon: ShieldCheck, title: "Sans engagement" },
+  { icon: ShieldCheck, title: "Aucune formation nécessaire" },
   { icon: Rocket, title: "Mise en place rapide" },
 ];
 
