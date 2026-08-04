@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, DeviceMobile } from "@phosphor-icons/react";
+import { Check, DeviceMobile, Sparkle } from "@phosphor-icons/react";
 import SectionHeading from "./SectionHeading.jsx";
 import { Button } from "./Header.jsx";
 
@@ -21,21 +21,38 @@ const PLANS = [
     highlight: false,
   },
   {
-    name: "Pro",
-    price: "39 €",
+    name: "Plus",
+    price: "25 €",
     period: "/mois · TVA comprise",
     installFee: true,
     smsUpsell: true,
-    href: "https://buy.stripe.com/9B63cnayXcyLbHd7Lx87K01",
     features: [
       "Jusqu'à 500 demandes d'avis par mois",
-      "Page de demande d'avis personnalisée",
-      "Personnalisation des e-mails",
-      "Tableau de bord complet",
-      "Historique des envois",
+      "Interface AvisBoost",
+      "Modèle d'e-mail professionnel",
+      "Tableau de bord",
+    ],
+    cta: "Choisir Plus",
+    highlight: false,
+  },
+  {
+    name: "Pro",
+    price: "99 €",
+    period: "/mois · TVA comprise",
+    installFee: true,
+    badge: "Le plus demandé",
+    limited: "Places limitées à 50 clients, pour garantir un vrai suivi personnalisé",
+    tagline: "Vous ne devez rien faire, on s'occupe de booster votre commerce.",
+    features: [
+      "Jusqu'à 1000 demandes d'avis par mois",
+      "Page de demande d'avis personnalisée à l'image de votre commerce",
+      "Texte d'e-mail sur mesure, rédigé pour maximiser les avis 5 étoiles",
+      "Bilan complet de votre présence Google au démarrage",
+      "Suivi personnalisé de vos résultats",
+      "Relances régulières pour ne rien laisser passer",
       "Support prioritaire",
     ],
-    cta: "Choisir Pro",
+    cta: "Réserver ma place",
     highlight: true,
   },
   {
@@ -55,7 +72,7 @@ const PLANS = [
 export default function Pricing() {
   return (
     <section id="tarifs" className="relative border-y border-line bg-mist py-24 sm:py-32">
-      <div className="shell mx-auto max-w-6xl">
+      <div className="shell mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Tarifs"
           title="Des tarifs simples, sans surprise."
@@ -66,7 +83,7 @@ export default function Pricing() {
           Frais d&rsquo;installation à 50 € au lieu de 99 € pour toute souscription, jusqu&rsquo;au 31 août
         </p>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3 lg:items-start">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:items-start">
           {PLANS.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -76,13 +93,13 @@ export default function Pricing() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className={`relative flex h-full flex-col rounded-[1.75rem] border p-8 ${
                 plan.highlight
-                  ? "border-green bg-ink text-white shadow-glow lg:-translate-y-3"
+                  ? "border-green bg-ink text-white shadow-glow xl:-translate-y-3"
                   : "border-line bg-white"
               }`}
             >
-              {plan.highlight && (
-                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-green px-4 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-glow">
-                  Le plus choisi
+              {plan.badge && (
+                <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-green px-4 py-1 text-xs font-bold uppercase tracking-wide text-white shadow-glow">
+                  {plan.badge}
                 </span>
               )}
 
@@ -106,6 +123,12 @@ export default function Pricing() {
                 </p>
               )}
 
+              {plan.tagline && (
+                <p className="mt-4 text-[0.95rem] font-semibold leading-relaxed text-green">
+                  {plan.tagline}
+                </p>
+              )}
+
               {plan.text && (
                 <p className={`mt-4 text-[0.95rem] leading-relaxed ${plan.highlight ? "text-white/60" : "text-ink-muted"}`}>
                   {plan.text}
@@ -123,6 +146,13 @@ export default function Pricing() {
                 </ul>
               )}
 
+              {plan.limited && (
+                <p className="mt-5 flex items-start gap-2 text-sm font-medium text-green">
+                  <Sparkle weight="fill" className="mt-0.5 size-4 shrink-0" />
+                  {plan.limited}
+                </p>
+              )}
+
               {plan.smsUpsell && (
                 <a
                   href="#pack-sms"
@@ -136,7 +166,7 @@ export default function Pricing() {
               )}
 
               <Button
-                href={plan.href || "#faq"}
+                href={plan.href || "#contact"}
                 target={plan.href ? "_blank" : undefined}
                 rel={plan.href ? "noopener noreferrer" : undefined}
                 className={`mt-8 h-12 w-full text-[0.95rem] ${
@@ -170,7 +200,7 @@ export default function Pricing() {
                 </span>
                 <h3 className="mt-3 text-xl font-semibold text-ink">Pack SMS</h3>
                 <p className="mt-1 text-sm font-medium text-green-dark">
-                  En complément de votre offre Start ou Pro
+                  En complément de votre offre Start ou Plus
                 </p>
                 <p className="mt-2 max-w-md text-[0.95rem] leading-relaxed text-ink-muted">
                   Vous avez les numéros de vos clients ? N&rsquo;hésitez plus. Le SMS
