@@ -42,7 +42,6 @@ const PLANS = [
     href: "https://buy.stripe.com/3cI5kv6iH2Yb4eL9TF87K05",
     badge: "Le plus demandé",
     limited: "Places limitées à 50 clients, pour garantir un vrai suivi personnalisé",
-    tagline: "Vous ne devez rien faire, on s'occupe de booster votre commerce — sur mesure, pour développer votre activité.",
     features: [
       "Jusqu'à 500 demandes d'avis par mois",
       "Page de demande d'avis personnalisée à l'image de votre commerce",
